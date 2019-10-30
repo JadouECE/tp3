@@ -1,27 +1,29 @@
-# Facebook ultra lite
+# TP 3
 
-![capture](./capture.png)
+A lire impérativement avant de commencer quoi que ce soit, ce sont les règles que vous devrez appliquer tout au long du semestre:
 
-Le but de ce TP est de reproduire un site identique à l'image grâce à React.
+<p align="center">
+ <a href="https://github.com/clementAC/Instructions-Technologies-Web-OCRES-Ing4/blob/master/README.md">Règles pour le semestre</a>
+</p>
 
-> Ce site contient à minima 2 composants et un container
+## Instructions
 
-- Les trois boutons en haut à droite servent à switcher entre les differents profils qui seront définis et stockés à travers un objet javascript
+1. Comprendre le code en HTML et JS
 
-- Le bouton change style permet de changer la couleur de background de la carte de profil
+2. Faire en sorte que la fonction start() soit executée sans appuyer sur le bouton #button-load-forecast.
+Le bouton se sert donc plus à rien, il faut l'enlever.
+*Hint: Voir la propriété onload.*
 
-Chaque profil contient les informations suivantes:
+3. Par défault la ville choisi pour les prédictions météo est Paris. Faire en sorte que votre user puisse rentrer le nom d'une ville dans l'input. Lorsqu'il appuit sur **Actualiser** cela actualise les informations avec la bonne ville. Il faut donc faire une requete différente.
+*Hint: [Comment récupérer la valeur d'un input](https://stackoverflow.com/questions/11563638/how-do-i-get-the-value-of-text-input-field-using-javascript)*
 
-- prénom
-- nom
-- date de naissance
-- image de profil
+4. Chercher les prévisions météo pour les trois jours à venir.
+*Hint: utiliser [la même API mais un end point différent](https://openweathermap.org/forecast16)*
 
-Chaque profil contient aussi la dernière publication de l'utilisateur
+* Créer une autre fonction ei: ```function getThreeDayForecast(){...}```
+* Cette API retourne les prévisions sur les **16 prochains jours.** Prennez donc les trois premiers. 
+* Utilisez les fonctions map, filter, sort pour manipuler la data.
+* Je vous conseille vivement d'afficher ce que retourne cette API afin de voir ou chercher l'information.
+* Afficher les mêmes informations que pour la météo d'aujourd'hui, a savoir : le temps principal 'main', la description, la température en Celsius, l'icon.
 
-Lorsque l'on switche d'un utilisateur à l'autre toutes les informations sont mises à jour.
-
-## Bonus:
-
-Lorsque l'utilisateur clique sur le bouton "C'est super !", il vient augmenter le nombre de "C'est super!" qu'on affichera à coté du bouton.
-Ce nombre sera stocké dans le profil de l'utilisateur ce qui permettra de la conserver lorsqu'on switchera d'utilisateur.
+5. Le code inital est responsive, faire en sorte qu'il le reste...
